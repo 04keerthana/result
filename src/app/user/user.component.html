@@ -1,0 +1,32 @@
+
+<table>
+    <thead>
+      <style>
+          .text-success{
+            color:green;
+          }
+          .text-warning{
+            color: orange;
+          }
+          .text-danger{
+            color: red;
+          }
+      </style>
+      <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Enroll Number</th>
+        <th>Stream</th> 
+        <th>Marks</th>
+      </tr>
+    </thead>
+     <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.name }}</td>
+        <td>{{ student.course }}</td>
+        <td>{{ student.enrollNumber }}</td>
+        <td>{{ student.stream }}</td>
+        <td [ngClass]="markClass(student.marks)">{{ student.marks }}</td> 
+      </tr>
+    </tbody> 
+    </table>
